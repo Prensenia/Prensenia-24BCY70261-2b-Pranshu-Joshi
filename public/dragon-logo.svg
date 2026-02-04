@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Mystical Gradients -->
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="headphoneBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="headphoneAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="mysticalGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="deepGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Mystical Aura Background -->
+  <circle cx="100" cy="100" r="95" fill="url(#glowEffect)" opacity="0.6"/>
+  
+  <!-- Headphone Headband - Main Arc -->
+  <path d="M 45 80 Q 45 30 100 25 Q 155 30 155 80" 
+        stroke="url(#headphoneBody)" stroke-width="12" fill="none" 
+        stroke-linecap="round" filter="url(#mysticalGlow)"/>
+  
+  <!-- Headband inner glow -->
+  <path d="M 45 80 Q 45 30 100 25 Q 155 30 155 80" 
+        stroke="#06b6d4" stroke-width="5" fill="none" 
+        stroke-linecap="round" opacity="0.3"/>
+  
+  <!-- Left Ear Cup -->
+  <circle cx="50" cy="85" r="22" fill="url(#headphoneBody)" filter="url(#deepGlow)"/>
+  
+  <!-- Left Ear Cup inner glow -->
+  <circle cx="50" cy="85" r="16" fill="#06b6d4" opacity="0.2"/>
+  
+  <!-- Left Speaker Mesh -->
+  <circle cx="50" cy="85" r="14" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="50" cy="85" r="10" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="50" cy="85" r="6" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.4"/>
+  
+  <!-- Left Speaker Grill pattern -->
+  <line x1="45" y1="75" x2="45" y2="95" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  <line x1="55" y1="75" x2="55" y2="95" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  <line x1="50" y1="80" x2="50" y2="90" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  
+  <!-- Right Ear Cup -->
+  <circle cx="150" cy="85" r="22" fill="url(#headphoneBody)" filter="url(#deepGlow)"/>
+  
+  <!-- Right Ear Cup inner glow -->
+  <circle cx="150" cy="85" r="16" fill="#06b6d4" opacity="0.2"/>
+  
+  <!-- Right Speaker Mesh -->
+  <circle cx="150" cy="85" r="14" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="150" cy="85" r="10" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="150" cy="85" r="6" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.4"/>
+  
+  <!-- Right Speaker Grill pattern -->
+  <line x1="145" y1="75" x2="145" y2="95" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  <line x1="155" y1="75" x2="155" y2="95" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  <line x1="150" y1="80" x2="150" y2="90" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  
+  <!-- Left Ear Pad -->
+  <ellipse cx="50" cy="110" rx="18" ry="14" fill="url(#headphoneBody)" opacity="0.7" filter="url(#mysticalGlow)"/>
+  
+  <!-- Right Ear Pad -->
+  <ellipse cx="150" cy="110" rx="18" ry="14" fill="url(#headphoneBody)" opacity="0.7" filter="url(#mysticalGlow)"/>
+  
+  <!-- Left Arm/Cable connector -->
+  <path d="M 50 107 Q 50 140 60 160" stroke="url(#headphoneBody)" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#mysticalGlow)"/>
+  
+  <!-- Right Arm/Cable connector -->
+  <path d="M 150 107 Q 150 140 140 160" stroke="url(#headphoneBody)" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#mysticalGlow)"/>
+  
+  <!-- Cable accent glow -->
+  <path d="M 50 107 Q 50 140 60 160" stroke="#06b6d4" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M 150 107 Q 150 140 140 160" stroke="#06b6d4" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  
+  <!-- Gaming RGB accent dots on headband -->
+  <circle cx="70" cy="35" r="2.5" fill="#fbbf24" filter="url(#mysticalGlow)"/>
+  <circle cx="100" cy="28" r="2.5" fill="#06b6d4" filter="url(#mysticalGlow)"/>
+  <circle cx="130" cy="35" r="2.5" fill="#7c3aed" filter="url(#mysticalGlow)"/>
+  
+  <!-- RGB glow rings -->
+  <circle cx="70" cy="35" r="4" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="100" cy="28" r="4" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="130" cy="35" r="4" fill="none" stroke="#7c3aed" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Microphone boom (subtle) -->
+  <path d="M 50 110 Q 35 120 30 135" stroke="url(#headphoneAccent)" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#mysticalGlow)"/>
+  
+  <!-- Mic tip -->
+  <circle cx="30" cy="135" r="2" fill="url(#headphoneAccent)" filter="url(#mysticalGlow)"/>
+  
+  <!-- Overall mystical aura lines -->
+  <path d="M 100 25 Q 80 50 60 100" stroke="#06b6d4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 100 25 Q 120 50 140 100" stroke="#06b6d4" stroke-width="1" fill="none" opacity="0.2"/>
+</svg>
